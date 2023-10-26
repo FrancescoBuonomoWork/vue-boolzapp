@@ -19,7 +19,8 @@ img{
 /* layout  */
 .app-wrapper{
     height: 100vh;
-    position: relative;;
+    position: relative;
+    padding-top: 80px;
 }
 .app-background{
     height: 100%;

@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 ul,
 ol,
 menu {
@@ -17,7 +18,10 @@ img{
 }
 
 #app {
-    height: 100vh;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 700px;
     overflow: hidden;
     display: flex;
     color: black;
@@ -33,6 +37,12 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: lightgray;
+}
+
+.side-header-cta{
+    gap: 10px;
+    display: flex;
 }
 /* AVATAR  */
 .avatar{
@@ -51,10 +61,6 @@ img{
 .cta{
     color: gray;
     cursor: pointer;
-}
-.side-header-cta{
-    gap: 10px;
-    display: flex;
 }
 
 

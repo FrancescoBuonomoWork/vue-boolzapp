@@ -9,7 +9,7 @@ createApp({
             message: 'Hello Vue!',
             contacts: [
                 {
-                    name: 'Michele', avatar: './img/avatar_1.png',
+                    name: 'Michele', avatar: './img/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -25,7 +25,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Fabio', avatar: './img/avatar_2.png',
+                    name: 'Fabio', avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -40,7 +40,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Samuele', avatar: './img/avatar_3.png',
+                    name: 'Samuele', avatar: './img/avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -56,7 +56,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Alessandro B.', avatar: './img/avatar_4.png',
+                    name: 'Alessandro B.', avatar: './img/avatar_4.jpg',
                     visible: true, messages: [
                         {
                             date: '10/01/2020 15:30:55', message: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -67,7 +67,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Alessandro L.', avatar: './img/avatar_5.png',
+                    name: 'Alessandro L.', avatar: './img/avatar_5.jpg',
                     visible: true,
                     messages: [
                         {
@@ -79,7 +79,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Claudia', avatar: './img/avatar_6.png',
+                    name: 'Claudia', avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -95,7 +95,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Federico', avatar: './img/avatar_7.png',
+                    name: 'Federico', avatar: './img/avatar_7.jpg',
                     visible: true,
                     messages: [
                         {
@@ -107,7 +107,7 @@ createApp({
                         }
                     ],
                 }, {
-                    name: 'Davide', avatar: './img/avatar_8.png',
+                    name: 'Davide', avatar: './img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
@@ -124,7 +124,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Ugo', avatar: './img/avatar_8.png',
+                    name: 'Ugo', avatar: './img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
@@ -141,7 +141,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Gennaro', avatar: './img/avatar_8.png',
+                    name: 'Gennaro', avatar: './img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {

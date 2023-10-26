@@ -126,7 +126,15 @@ img{
     top: 8px;
     color: lightgray;
 }
-
+/* chat main  */
+.last-message{
+    color: lightgray;
+}
+.avatar-chat{
+    padding:16px  20px;
+    border-bottom: 1px solid lightgray;
+   
+}
 /* debug  */
 
 .debug #app {

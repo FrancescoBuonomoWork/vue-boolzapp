@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+
+#app {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    color: black;
+}
+.container-side{
+    flex-basis: 350px;
+}
+.container-chat {
+    flex-grow: 1;
+}
+/* SIDE HEADER  */
+.side-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* AVATAR  */
+.avatar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.avatar-img{
+    width: 50px;
+    border-radius: 50%;
+}
+.avatar-name{
+    color: black;
+}
+/* cta  */
+.cta{
+    color: gray;
+    cursor: pointer;
+}
+.side-header-cta{
+    gap: 10px;
+    display: flex;
+}
+
+
+/* debug  */
+
+.debug #app {
+    padding: 20px;
+    border:2px solid orange;
+}
+.debug .container-side {
+    padding: 20px;
+    border:2px solid red;
+}
+.debug .container-chat {
+    padding: 20px;
+    border:2px solid blue;
+}

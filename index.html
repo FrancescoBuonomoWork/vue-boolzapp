@@ -58,10 +58,11 @@
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->
                             <ul>
-                                <li class="avatar avatar-chat">
-                                    <img class="avatar-img" src="./img/avatar_2.jpg">
+                                <li v-for="(contact,index) in contacts" class="avatar avatar-chat">
+                                    <!-- <img class="avatar-img" src="./img/avatar_2.jpg"> -->
+                                    <img class="avatar-img" :src="contact.avatar">
                                     <div>
-                                        <p class="avatar-name">Michele</p>
+                                        <p class="avatar-name">{{contact.name}}</p>
                                         <p class="last-message">Ultimo messaggio inviato</p>
                                     </div>
                                 </li>

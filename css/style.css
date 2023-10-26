@@ -69,6 +69,17 @@ img{
     gap: 10px;
     display: flex;
 }
+/* side  */
+.container-side,
+.side-main-container,
+.side-main{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.side-main-content{
+    overflow-y: scroll;
+}
 /* AVATAR  */
 .avatar{
     display: flex;

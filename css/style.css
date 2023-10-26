@@ -16,15 +16,36 @@ img{
     max-width: 100%;
     display: block;
 }
-
+/* layout  */
+.app-wrapper{
+    height: 100vh;
+    position: relative;;
+}
+.app-background{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+}
+.color1{
+    background-color: green;
+    height: 20%;
+}
+.color2{
+    background-color: white;
+    height: 80%;
+}
 #app {
+    
     margin: 0 auto;
-    margin-top: 50px;
     width: 1000px;
     height: 700px;
     overflow: hidden;
     display: flex;
     color: black;
+    background-color: white;
 }
 .container-side{
     flex-basis: 350px;

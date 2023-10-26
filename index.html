@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <script src="https://kit.fontawesome.com/bc42e2820a.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/bc42e2820a.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="debug">
-   
-    <div id="app">
-        <div class="container-side">  
-            <!-- inizio side header  -->
-            <div class="side-header-container">
-                <div class="side-header">
-                    <div class="avatar">
-                        <img class="avatar-img" src="./img/avatar_1.jpg">
-                        <p class="avatar-name">Francesco</p>
-                    </div>
-                    <div class="side-header-cta">
-                        <span class="cta"><i class="fa-solid fa-circle-notch"></i></span>
-                        <span class="cta"><i class="fa-solid fa-message"></i></span>
-                        <span class="cta"><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                    </div>
-                </div>
-            </div>
-              <!-- fine side header  -->
-            <!-- inizio side main  -->
-            <div class="side-main-container">
-                <div class="side-main">
-                    <div class="message">
-                        <div>
-                            <span><i class="fa-solid fa-bell-slash"></i></span>
-                        </div>
-                        <div>
-
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <p>Attiva notifiche desktop</p>
-                        </div>
-
-                    </div>
-                    
-                </div>
-            </div>
+    <div class="app-wrapper">
+        <div class="app-background">
+            <div class="color1"></div>
+            <div class="color2"></div>
         </div>
-        <div class="container-chat">
-            <div class="chat-header-container"></div>
-            <div class="chat-main-container"></div>
+        <div id="app">
+            <div class="container-side">
+                <!-- inizio side header  -->
+                <div class="side-header-container">
+                    <div class="side-header">
+                        <div class="avatar">
+                            <img class="avatar-img" src="./img/avatar_1.jpg">
+                            <p class="avatar-name">Francesco</p>
+                        </div>
+                        <div class="side-header-cta">
+                            <span class="cta"><i class="fa-solid fa-circle-notch"></i></span>
+                            <span class="cta"><i class="fa-solid fa-message"></i></span>
+                            <span class="cta"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fine side header  -->
+                <!-- inizio side main  -->
+                <div class="side-main-container">
+                    <div class="side-main">
+                        <div class="message">
+                            <div>
+                                <span><i class="fa-solid fa-bell-slash"></i></span>
+                            </div>
+                            <div>
+
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <p>Attiva notifiche desktop</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-chat">
+                <div class="chat-header-container"></div>
+                <div class="chat-main-container"></div>
+            </div>
         </div>
     </div>
-    
+
+
 
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>

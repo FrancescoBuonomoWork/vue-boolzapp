@@ -107,7 +107,25 @@ img{
     color: gray;
     cursor: pointer;
 }
-
+/* search-bar */
+.search-bar-container{
+    background-color: lightgray;
+    padding: 3px 0;
+    position: relative;
+}
+.search-bar{
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    height: 25px;
+    padding-left: 40px;
+    
+}
+.search-bar-icon{
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: lightgray;
+}
 
 /* debug  */
 

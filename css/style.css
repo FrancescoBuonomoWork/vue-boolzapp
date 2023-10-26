@@ -37,7 +37,7 @@ img{
     height: 20%;
 }
 .color2{
-    background-color: white;
+    background-color: black;
     height: 80%;
 }
 #app {
@@ -135,6 +135,31 @@ img{
     border-bottom: 1px solid lightgray;
    
 }
+.chat-main-container{
+    /* background-image: url(../img/mine.jpg); */
+    display: flex;
+    flex-direction: column;
+}
+.chat-container{
+    background-image: url(../img/mine.jpg);
+    flex-grow: 1;
+}
+.chat-bar-container{
+   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: lightgray;
+}
+.chat-bar{
+    flex-grow: 1;
+    height: 25px;
+    border: none;
+    border-radius: 4px;
+}
+
 /* debug  */
 
 .debug #app {

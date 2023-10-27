@@ -53,12 +53,12 @@
                             <!-- inizio barra di ricerca  -->
                             <div class="search-bar-container">
                                 <span class="search-bar-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input v-model="searchBarVal" @keyup="searchUser()" class="search-bar" type="text" placeholder="cerca o inizia una nuova chat">
+                                <input v-model="searchBarVal" class="search-bar" type="text" placeholder="cerca o inizia una nuova chat">
                             </div>
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->
                             <ul >
-                                <li v-for="(contact,index) in contacts" class="avatar avatar-chat" :class="{
+                                <li v-for="(contact,index) in searchContacts" class="avatar avatar-chat" :class="{
                                     'active': index === currentIndex
                                 }" :key="index"
                                 @click="chatSelector(index)">
@@ -96,7 +96,7 @@
                 <div class="chat-main-container">
                     <!-- <div class="chat-container"> -->
                         <ul class="chat">
-                            <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in contacts[currentIndex].messages">
+                            <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in currentContact.messages">
 
                                 {{ message.message}}
                             </li>

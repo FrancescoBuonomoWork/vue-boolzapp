@@ -160,7 +160,7 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
         }
     },
     methods: {
@@ -189,21 +189,15 @@ createApp({
                 this.contacts[this.currentIndex].messages.push(automaticAnswer);
               }, "1000");
         },
-        searchUser(){
-            console.log('cerca',this.searchBarVal,this.contacts[0].name)
-
-            let names =  [];
-
-            for(i = 0; i > this.contacts.lenght - 1; i++){
-                names.push( this.contacts[i].name)
-               
-            }
-            console.log(names)
-            this.searchBarVal.filter(()=>{
-            
+    },
+    computed: {
+        currentContact() {
+            return this.contacts[this.currentIndex];
+        },
+        searchContacts() {
+            return this.contacts.filter((contact) => {
+                return contact.name.includes(this.searchBarVal);
             })
-
-           
         }
     },
     mounted() {

@@ -95,7 +95,7 @@ img{
     color: black;
 }
 /* Message  */
-.message{
+.alert{
     background-color: lightblue;
     display: flex;
     align-items: center;
@@ -103,9 +103,7 @@ img{
     padding: 20px ;
 
 }
-.message-icon{
-    
-}
+
 .bell{
     color: lightblue;
     background-color: white;
@@ -142,13 +140,20 @@ img{
     display: flex;
     flex-direction: column;
 }
-.last-message{
+/* .last-message{
     color: lightgray;
-}
+} */
+/* avatar chat  */
 .avatar-chat{
     padding:16px  20px;
     border-bottom: 1px solid lightgray;
    
+}
+ .avatar-chat:hover{
+    background-color:lightgray;
+} 
+.avatar-chat.active{
+    background-color: gray;
 }
 .chat-main-container{
     flex-grow: 1;

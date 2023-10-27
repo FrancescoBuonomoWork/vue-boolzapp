@@ -58,7 +58,9 @@
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->
                             <ul>
-                                <li v-for="(contact,index) in contacts" class="avatar avatar-chat" :key="index">
+                                <li v-for="(contact,index) in contacts" class="avatar avatar-chat" :class="{
+                                    'active': index === currentIndex
+                                }" :key="index">
                                     <!-- <img class="avatar-img" src="./img/avatar_2.jpg"> -->
                                     <img class="avatar-img" :src="contact.avatar">
                                     <div>
@@ -76,9 +78,9 @@
                     <!-- inizio header chat  -->
                     <div class="side-header">
                         <div class="avatar">
-                            <img class="avatar-img" src="./img/avatar_2.jpg">
+                            <img class="avatar-img" :src="contacts[currentIndex].avatar">
                             <div>
-                                <p class="avatar-name">Michele</p>
+                                <p class="avatar-name">{{ contacts[currentIndex].name }}</p>
                                 <p class="last-acess">Ultimo messaggio inviato</p>
                             </div>
                         </div>

@@ -7,6 +7,7 @@ createApp({
     data() {
         return {
             message: 'Hello Vue!',
+            currentIndex: 0,
             contacts: [
                 {
                     name: 'Michele', avatar: './img/avatar_1.jpg',

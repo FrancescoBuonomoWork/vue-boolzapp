@@ -162,7 +162,10 @@ createApp({
         }
     },
     methods: {
-
+        chatSelector(index) {
+            // console.log('hai selezionato la chat',index);
+            this.currentIndex = index  ;
+        }
     },
     mounted() {
         console.log('vue funziona')

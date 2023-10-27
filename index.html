@@ -57,10 +57,11 @@
                             </div>
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->
-                            <ul>
+                            <ul >
                                 <li v-for="(contact,index) in contacts" class="avatar avatar-chat" :class="{
                                     'active': index === currentIndex
-                                }" :key="index">
+                                }" :key="index"
+                                @click="chatSelector(index)">
                                     <!-- <img class="avatar-img" src="./img/avatar_2.jpg"> -->
                                     <img class="avatar-img" :src="contact.avatar">
                                     <div>

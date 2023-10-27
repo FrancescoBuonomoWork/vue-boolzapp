@@ -94,8 +94,8 @@
                  <!-- fine header chat  -->
                 <div class="chat-main-container">
                     <!-- <div class="chat-container"> -->
-                        <ul class="chat">
-                            <li class="message sent">Lorem ipsum dolor sit amet.</li>
+                        <ul class="chat" v-for="(contact,index) in contacts">
+                            <li class="message sent">{{}}</li>
                             <li class="message received">Lorem, ipsum dolor.</li>
                             <li class="message sent">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
@@ -104,12 +104,13 @@
                         </ul>
                         
                     <!-- </div> -->
-                    <div class="chat-bar-container">
-                       <span class="cta"><i class="fa-regular fa-face-smile"></i></span> 
-                        <input class="chat-bar" type="text" placeholder="scrivi un messaggio">
-                        <span class="cta"><i class="fa-solid fa-microphone"></i></span> 
-                    </div>
                 </div>
+                <div class="chat-bar-container">
+                   <span class="cta"><i class="fa-regular fa-face-smile"></i></span> 
+                    <input class="chat-bar" type="text" placeholder="scrivi un messaggio">
+                    <span class="cta"><i class="fa-solid fa-microphone"></i></span> 
+                </div>
+
             </div>
         </div>
     </div>

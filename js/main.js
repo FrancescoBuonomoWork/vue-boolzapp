@@ -1,4 +1,4 @@
-console.log('funziona');
+// console.log('funziona');
 
 
 const { createApp } = Vue
@@ -7,6 +7,7 @@ createApp({
     data() {
         return {
             message: 'Hello Vue!',
+            newMessageVal: '',
             currentIndex: 0,
             contacts: [
                 {
@@ -164,10 +165,31 @@ createApp({
     methods: {
         chatSelector(index) {
             // console.log('hai selezionato la chat',index);
-            this.currentIndex = index  ;
+            this.currentIndex = index;
+        },
+        sendMessage() {
+            // console.log('invia', this.newMessageVal)
+            const newMessage = {
+                date: '20/03/2020 16:35:00',
+                message: this.newMessageVal,
+                status: 'sent'
+            }
+            this.contacts[this.currentIndex].messages.push(newMessage);
+            this.newMessageVal = '';
+
+            // Risposta automatica 
+            setTimeout(() => {
+                console.log("Delayed for 1 second.");
+                const automaticAnswer = {
+                    date: '20/03/2020 16:35:00',
+                    message: 'ok',
+                    status: 'received'
+                };
+                this.contacts[this.currentIndex].messages.push(automaticAnswer);
+              }, "1000");
         }
     },
     mounted() {
-        console.log('vue funziona')
+        // console.log('vue funziona')
     }
 }).mount('#app')

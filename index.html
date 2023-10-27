@@ -115,7 +115,7 @@
                 </div>
                 <div class="chat-bar-container">
                    <span class="cta"><i class="fa-regular fa-face-smile"></i></span> 
-                    <input class="chat-bar" type="text" placeholder="scrivi un messaggio">
+                    <input v-model="newMessageVal" @keyup.enter="sendMessage()" class="chat-bar" type="text" placeholder="scrivi un messaggio">
                     <span class="cta"><i class="fa-solid fa-microphone"></i></span> 
                 </div>
 

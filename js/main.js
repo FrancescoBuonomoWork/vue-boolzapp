@@ -8,6 +8,7 @@ createApp({
         return {
             message: 'Hello Vue!',
             newMessageVal: '',
+            searchBarVal: '',
             currentIndex: 0,
             contacts: [
                 {
@@ -187,6 +188,9 @@ createApp({
                 };
                 this.contacts[this.currentIndex].messages.push(automaticAnswer);
               }, "1000");
+        },
+        searchUser(){
+            console.log('cerca',this.searchBarVal)
         }
     },
     mounted() {

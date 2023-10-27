@@ -53,7 +53,7 @@
                             <!-- inizio barra di ricerca  -->
                             <div class="search-bar-container">
                                 <span class="search-bar-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input class="search-bar" type="text" placeholder="cerca o inizia una nuova chat">
+                                <input v-model="searchBarVal" @keyup.enter="searchUser()" class="search-bar" type="text" placeholder="cerca o inizia una nuova chat">
                             </div>
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->

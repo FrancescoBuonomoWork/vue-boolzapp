@@ -170,30 +170,34 @@ createApp({
         },
         sendMessage() {
             // console.log('invia', this.newMessageVal)
-            const newMessage = {
-                date: '20/03/2020 16:35:00',
-                message: this.newMessageVal,
-                status: 'sent'
-            }
-            this.contacts[this.currentIndex].messages.push(newMessage);
-            this.newMessageVal = '';
-
-            // Risposta automatica 
-            setTimeout(() => {
-                console.log("Delayed for 1 second.");
-                const automaticAnswer = {
+            if(this.newMessageVal !== '' ){
+                
+                const newMessage = {
                     date: '20/03/2020 16:35:00',
-                    message: 'ok',
-                    status: 'received'
-                };
-                this.contacts[this.currentIndex].messages.push(automaticAnswer);
-              }, "1000");
+                    message: this.newMessageVal,
+                    status: 'sent'
+                }
+                this.contacts[this.currentIndex].messages.push(newMessage);
+                this.newMessageVal = '';
+    
+                // Risposta automatica 
+                setTimeout(() => {
+                    console.log("Delayed for 1 second.");
+                    const automaticAnswer = {
+                        date: '20/03/2020 16:35:00',
+                        message: 'ok',
+                        status: 'received'
+                    };
+                    this.contacts[this.currentIndex].messages.push(automaticAnswer);
+                }, "1000");
+            }
         },
     },
     computed: {
         currentContact() {
             return this.contacts[this.currentIndex];
         },
+
         searchContacts() {
             return this.contacts.filter((contact) => {
                 return contact.name.toLowerCase().includes(this.searchBarVal.toLowerCase());

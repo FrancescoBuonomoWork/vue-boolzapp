@@ -94,13 +94,20 @@
                  <!-- fine header chat  -->
                 <div class="chat-main-container">
                     <!-- <div class="chat-container"> -->
-                        <ul class="chat" v-for="(contact,index) in contacts">
-                            <li class="message sent">{{}}</li>
-                            <li class="message received">Lorem, ipsum dolor.</li>
-                            <li class="message sent">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                                alias deserunt in.
+                        <ul class="chat">
+                            <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in contacts[currentIndex].messages">
+
+                                {{ message.message}}
                             </li>
+                         
+                         
+                            <!-- <li
+                            
+                             class="message sent">{{contacts[currentIndex].messages[0].message}}</li>
+                            <li class="message received">{{contacts[currentIndex].messages[1].message}}</li>
+                            <li class="message sent">
+                                {{contacts[currentIndex].messages[2].message}}
+                            </li> -->
                         </ul>
                         
                     <!-- </div> -->

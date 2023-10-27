@@ -140,6 +140,7 @@ img{
     display: flex;
     flex-direction: column;
 }
+
 /* .last-message{
     color: lightgray;
 } */
@@ -160,9 +161,34 @@ img{
     display: flex;
     flex-direction: column;
 }
-.chat-container{
+/* .chat-container{
     background-image: url(../img/mine.jpg);
     flex-grow: 1;
+} */
+
+/* CHAT  */
+.chat {
+	flex-grow: 1;
+	background-image: url('../img/mine.jpg');
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.message {
+	border-radius: 16px;
+	padding: 10px 20px;
+	max-width: 80%;
+}
+
+.message.sent {
+	background-color: #d5f9ba;
+	align-self: flex-end;
+}
+
+.message.received {
+	background-color: white;
+	align-self: flex-start;
 }
 .chat-bar-container{
    

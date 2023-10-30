@@ -193,14 +193,15 @@ createApp({
                 }, "1000");
             }
         },
-        toggleDropDown() {
+        toggleDropDown(currentIndex) {
             // console.log('dropdown');
             this.showDropdown = !this.showDropdown;
 
         },
-        deleteMessage(){
+        deleteMessage(currentIndex){
             console.log('messaggio cancellato')
-           this.contacts[this.currentIndex].messages.splice(this.currentIndex,1)
+            // console.log(this.contacts[this.currentIndex].messages +" "+ this.currentIndex)
+           this.contacts[this.currentIndex].messages.splice(currentIndex,1)
         }
     },
     computed: {

@@ -3,6 +3,8 @@
 
 const { createApp } = Vue
 
+
+
 createApp({
     data() {
         return {
@@ -11,6 +13,7 @@ createApp({
             newMessageVal: '',
             searchBarVal: '',
             currentIndex: 0,
+            dateFormat:'dd/LL/yyyy HH:mm:ss',
             contacts: [
                 {
                     name: 'Michele', avatar: './img/avatar_1.jpg',
@@ -194,7 +197,8 @@ createApp({
             }
         },
         toggleDropDown(currentIndex) {
-            // console.log('dropdown');
+            console.log('dropdown'+ currentIndex);
+           
             this.showDropdown = !this.showDropdown;
 
         },

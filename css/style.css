@@ -148,6 +148,7 @@ img{
 .avatar-chat{
     padding:16px  20px;
     border-bottom: 1px solid lightgray;
+    justify-content: space-around;
    
 }
  .avatar-chat:hover{
@@ -224,6 +225,11 @@ img{
     z-index: 1;
     line-height: 24px;
   }
+
+
+.last-message-time{
+    align-self: flex-start;
+}
 /* debug  */
 
 .debug #app {

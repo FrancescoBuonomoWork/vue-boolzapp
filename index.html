@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <script src="luxon.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="https://kit.fontawesome.com/bc42e2820a.js" crossorigin="anonymous"></script>
@@ -67,7 +68,9 @@
                                     <div>
                                         <p class="avatar-name">{{contact.name}}</p>
                                         <p class="last-message">Ultimo messaggio inviato</p>
+
                                     </div>
+                                    <span class="last-message-time">12:00</span>
                                 </li>
                             </ul>
                         </div>
@@ -84,6 +87,7 @@
                                 <p class="avatar-name">{{ contacts[currentIndex].name }}</p>
                                 <p class="last-acess">Ultimo messaggio inviato</p>
                             </div>
+                           
                         </div>
                         <div class="side-header-cta">
                             <span class="cta"><i class="fa-solid fa-circle-notch"></i></span>
@@ -98,9 +102,10 @@
                         <ul class="chat">
                             <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in currentContact.messages">
 
-                                {{ message.message}}
-
-                                <span @click="toggleDropDown(index)" class="dropDownMenu">
+                                <span>{{ message.message}}</span>
+                                <!-- <span>{{ message.date}}</span>  -->
+                                
+                                <span @click="toggleDropDown(message,index)" class="dropDownMenu">
                                     <i class="fa-solid fa-chevron-down"></i>
                                     <div v-show="showDropdown" class="dropdown-content">
                                         <div>Message info</div>
@@ -134,7 +139,7 @@
 
 
 
-
+    
     <script src="./js/main.js"></script>
 </body>
 

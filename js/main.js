@@ -4,6 +4,10 @@
 const { createApp } = Vue
 
 const DateTime = luxon.DateTime;
+// DateTime.dateFormat('dd/LL/yyyy HH:mm:ss');
+// const datanow = date.now('dd/LL/yyyy HH:mm:ss');
+// console.log(datanow)
+
 
 
 createApp({
@@ -180,18 +184,18 @@ createApp({
             if (this.newMessageVal !== '') {
 
                 const newMessage = {
-                    date: '20/03/2020 16:35:00',
+                    date: DateTime.now().toFormat(this.dateFormat),
                     message: this.newMessageVal,
                     status: 'sent'
                 }
                 this.contacts[this.currentIndex].messages.push(newMessage);
                 this.newMessageVal = '';
-
+                
                 // Risposta automatica 
                 setTimeout(() => {
                     console.log("Delayed for 1 second.");
                     const automaticAnswer = {
-                        date: '20/03/2020 16:35:00',
+                        date: DateTime.now().toFormat(this.dateFormat),
                         message: 'ok',
                         status: 'received'
                     };
@@ -201,14 +205,20 @@ createApp({
         },
         toggleDropDown(index) {
             console.log('dropdown');
-            this.currentMessageIndex = index;
-            
-            setTimeout(() => {
-                // Your logic here
+            if(this.currentMessageIndex === -1){
 
-            this.currentMessageIndex = -1;
+                this.currentMessageIndex = index;
+            } else {
+                this.currentMessageIndex = -1;
+            }
+           
+
+            // setTimeout(() => {
+            //     // Your logic here
+
+            // this.currentMessageIndex = -1;
               
-              }, 2000);
+            //   }, 2000);
             
 
         },
@@ -226,6 +236,7 @@ createApp({
         currentContact() {
             return this.contacts[this.currentIndex];
         },
+        
 
         searchContacts() {
             return this.contacts.filter((contact) => {

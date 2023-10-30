@@ -13,7 +13,7 @@ createApp({
             newMessageVal: '',
             searchBarVal: '',
             currentIndex: 0,
-            dateFormat:'dd/LL/yyyy HH:mm:ss',
+            dateFormat: 'dd/LL/yyyy HH:mm:ss',
             contacts: [
                 {
                     name: 'Michele', avatar: './img/avatar_1.jpg',
@@ -174,8 +174,8 @@ createApp({
         },
         sendMessage() {
             // console.log('invia', this.newMessageVal)
-            if(this.newMessageVal !== '' ){
-                
+            if (this.newMessageVal !== '') {
+
                 const newMessage = {
                     date: '20/03/2020 16:35:00',
                     message: this.newMessageVal,
@@ -183,7 +183,7 @@ createApp({
                 }
                 this.contacts[this.currentIndex].messages.push(newMessage);
                 this.newMessageVal = '';
-    
+
                 // Risposta automatica 
                 setTimeout(() => {
                     console.log("Delayed for 1 second.");
@@ -196,16 +196,18 @@ createApp({
                 }, "1000");
             }
         },
-        toggleDropDown(currentIndex) {
-            console.log('dropdown'+ currentIndex);
-           
+        toggleDropDown(message, currentIndex) {
+            console.log('dropdown' + currentIndex);
+
+
             this.showDropdown = !this.showDropdown;
 
+
         },
-        deleteMessage(currentIndex){
+        deleteMessage(currentIndex) {
             console.log('messaggio cancellato')
             // console.log(this.contacts[this.currentIndex].messages +" "+ this.currentIndex)
-           this.contacts[this.currentIndex].messages.splice(currentIndex,1)
+            this.contacts[this.currentIndex].messages.splice(currentIndex, 1)
         }
     },
     computed: {

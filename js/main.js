@@ -194,9 +194,13 @@ createApp({
             }
         },
         toggleDropDown() {
-            console.log('dropdown');
+            // console.log('dropdown');
             this.showDropdown = !this.showDropdown;
 
+        },
+        deleteMessage(){
+            console.log('messaggio cancellato')
+           this.contacts[this.currentIndex].messages.splice(this.currentIndex,1)
         }
     },
     computed: {

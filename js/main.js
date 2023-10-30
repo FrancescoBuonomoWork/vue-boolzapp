@@ -202,8 +202,20 @@ createApp({
         toggleDropDown(index) {
             console.log('dropdown');
             this.currentMessageIndex = index;
+            
+            setTimeout(() => {
+                // Your logic here
+
+            this.currentMessageIndex = -1;
+              
+              }, 2000);
+            
 
         },
+        // mousein(index) {
+        //     console.log('mouse in')
+        //     this.showDropdown = true
+        // },
         deleteMessage(currentIndex) {
             console.log('messaggio cancellato')
             // console.log(this.contacts[this.currentIndex].messages +" "+ this.currentIndex)

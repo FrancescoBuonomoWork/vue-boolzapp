@@ -7,6 +7,7 @@ createApp({
     data() {
         return {
             message: 'Hello Vue!',
+            showDropdown: false,
             newMessageVal: '',
             searchBarVal: '',
             currentIndex: 0,
@@ -192,6 +193,11 @@ createApp({
                 }, "1000");
             }
         },
+        toggleDropDown() {
+            console.log('dropdown');
+            this.showDropdown = !this.showDropdown;
+
+        }
     },
     computed: {
         currentContact() {

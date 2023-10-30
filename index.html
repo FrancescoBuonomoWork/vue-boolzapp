@@ -99,6 +99,14 @@
                             <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in currentContact.messages">
 
                                 {{ message.message}}
+                                <span @click="toggleDropDown()" class="dropDownMenu">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <div v-show="showDropdown" class="dropdown-content">
+                                        <div>Message info</div>
+                                        <div>Delete message</div>
+                                    </div>
+
+                                </span>
                             </li>
                          
                          

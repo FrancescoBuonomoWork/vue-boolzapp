@@ -3,6 +3,7 @@
 
 const { createApp } = Vue
 
+const DateTime = luxon.DateTime;
 
 
 createApp({
@@ -13,6 +14,7 @@ createApp({
             newMessageVal: '',
             searchBarVal: '',
             currentIndex: 0,
+            currentMessageIndex: -1,
             dateFormat: 'dd/LL/yyyy HH:mm:ss',
             contacts: [
                 {
@@ -171,6 +173,7 @@ createApp({
         chatSelector(index) {
             // console.log('hai selezionato la chat',index);
             this.currentIndex = index;
+            this.currentMessageIndex = -1;
         },
         sendMessage() {
             // console.log('invia', this.newMessageVal)
@@ -196,12 +199,9 @@ createApp({
                 }, "1000");
             }
         },
-        toggleDropDown(message, currentIndex) {
-            console.log('dropdown' + currentIndex);
-
-
-            this.showDropdown = !this.showDropdown;
-
+        toggleDropDown(index) {
+            console.log('dropdown');
+            this.currentMessageIndex = index;
 
         },
         deleteMessage(currentIndex) {

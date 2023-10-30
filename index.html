@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
-    <script src="luxon.js"></script>
+    <script src=
+    "https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js">
+    </script>
     <link rel="stylesheet" href="./css/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="https://kit.fontawesome.com/bc42e2820a.js" crossorigin="anonymous"></script>
@@ -54,15 +56,15 @@
                             <!-- inizio barra di ricerca  -->
                             <div class="search-bar-container">
                                 <span class="search-bar-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input v-model="searchBarVal" class="search-bar" type="text" placeholder="cerca o inizia una nuova chat">
+                                <input v-model="searchBarVal" class="search-bar" type="text"
+                                    placeholder="cerca o inizia una nuova chat">
                             </div>
                             <!-- fine barra di ricerca  -->
                             <!-- inizio lista utenti chat  -->
-                            <ul >
+                            <ul>
                                 <li v-for="(contact,index) in searchContacts" class="avatar avatar-chat" :class="{
                                     'active': index === currentIndex
-                                }" :key="index"
-                                @click="chatSelector(index)">
+                                }" :key="index" @click="chatSelector(index)">
                                     <!-- <img class="avatar-img" src="./img/avatar_2.jpg"> -->
                                     <img class="avatar-img" :src="contact.avatar">
                                     <div>
@@ -87,7 +89,7 @@
                                 <p class="avatar-name">{{ contacts[currentIndex].name }}</p>
                                 <p class="last-acess">Ultimo messaggio inviato</p>
                             </div>
-                           
+
                         </div>
                         <div class="side-header-cta">
                             <span class="cta"><i class="fa-solid fa-circle-notch"></i></span>
@@ -96,41 +98,43 @@
                         </div>
                     </div>
                 </div>
-                 <!-- fine header chat  -->
+                <!-- fine header chat  -->
                 <div class="chat-main-container">
                     <!-- <div class="chat-container"> -->
-                        <ul class="chat">
-                            <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"  v-for="(message,index) in currentContact.messages">
+                    <ul class="chat">
+                        <li class="message" :class="message.status ==='sent' ? 'sent': 'received'"
+                            v-for="(message,index) in currentContact.messages">
 
-                                <span>{{ message.message}}</span>
-                                <!-- <span>{{ message.date}}</span>  -->
-                                
-                                <span @click="toggleDropDown(message,index)" class="dropDownMenu">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    <div v-show="showDropdown" class="dropdown-content">
-                                        <div>Message info</div>
-                                        <div @click="deleteMessage(index)">Delete message</div>
-                                    </div>
+                            <span>{{ message.message}}</span>
+                            <!-- <span>{{ message.date}}</span>  -->
+                            <!-- <p>{{currentMessageIndex}}</p> -->
+                            <span @click="toggleDropDown(index)" class="dropDownMenu">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div v-show="index === currentMessageIndex " class="dropdown-content">
+                                    <div>Message info</div>
+                                    <div @click="deleteMessage(index)">Delete message</div>
+                                </div>
 
-                                </span>
-                            </li>
-                         
-                         
-                            <!-- <li
+                            </span>
+                        </li>
+
+
+                        <!-- <li
                             
                              class="message sent">{{contacts[currentIndex].messages[0].message}}</li>
                             <li class="message received">{{contacts[currentIndex].messages[1].message}}</li>
                             <li class="message sent">
                                 {{contacts[currentIndex].messages[2].message}}
                             </li> -->
-                        </ul>
-                        
+                    </ul>
+
                     <!-- </div> -->
                 </div>
                 <div class="chat-bar-container">
-                   <span class="cta"><i class="fa-regular fa-face-smile"></i></span> 
-                    <input v-model="newMessageVal" @keyup.enter="sendMessage()" class="chat-bar" type="text" placeholder="scrivi un messaggio">
-                    <span class="cta"><i class="fa-solid fa-microphone"></i></span> 
+                    <span class="cta"><i class="fa-regular fa-face-smile"></i></span>
+                    <input v-model="newMessageVal" @keyup.enter="sendMessage()" class="chat-bar" type="text"
+                        placeholder="scrivi un messaggio">
+                    <span class="cta"><i class="fa-solid fa-microphone"></i></span>
                 </div>
 
             </div>
@@ -139,7 +143,7 @@
 
 
 
-    
+
     <script src="./js/main.js"></script>
 </body>
 

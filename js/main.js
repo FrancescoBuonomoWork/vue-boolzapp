@@ -188,7 +188,8 @@ createApp({
                     message: this.newMessageVal,
                     status: 'sent'
                 }
-                this.contacts[this.currentIndex].messages.push(newMessage);
+                const activeChat = this.contacts[this.currentIndex].messages
+                activeChat.push(newMessage);
                 this.newMessageVal = '';
                 
                 // Risposta automatica 
@@ -199,7 +200,7 @@ createApp({
                         message: 'ok',
                         status: 'received'
                     };
-                    this.contacts[this.currentIndex].messages.push(automaticAnswer);
+                    activeChat.push(automaticAnswer);
                 }, "1000");
             }
         },

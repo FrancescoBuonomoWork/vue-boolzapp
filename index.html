@@ -69,7 +69,7 @@
                                     <img class="avatar-img" :src="contact.avatar">
                                     <div>
                                         <p class="avatar-name">{{contact.name}}</p>
-                                        <p class="last-message">Ultimo messaggio inviato</p>
+                                        <p class="last-message">{{contact.messages.at(-1).message }}</p>
 
                                     </div>
                                     <span class="last-message-time">12:00</span>
